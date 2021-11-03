@@ -6,8 +6,8 @@ const useStyles = createUseStyles({
       headerNavBar: {
         "backgroundColor": "#131313",
         "padding": "20px 104px 20px",
-        "@media(max-width: 750px)": {padding: '20px 40px 20px'}}
-      ,
+        "@media(max-width: 750px)": {padding: '20px 40px 20px'}},
+        
       headerLink: {
         "color": "white",
         "fontFamily": "'Roboto Slab', Arial, sans-serif",

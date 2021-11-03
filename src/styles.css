@@ -14,11 +14,12 @@ body {
     /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale;
     /* Firefox */
-  }
+}
 
-  .flex-wrapper {
+.flex-wrapper {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
+

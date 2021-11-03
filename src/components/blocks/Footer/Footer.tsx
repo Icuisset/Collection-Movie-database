@@ -11,9 +11,7 @@ function Footer(): JSX.Element {
         <footer className="footer">
         <p className="footer__copyright">© 2021 CodeWithDragos, Powered by Omdb API</p>
         <div className="footer__link-zone">
-        <div className="footer__link-zone-left">
-        <a className='footer__link' href='https://isawabi.com/about/' target="_blank">Isabelle Cuisset</a>
-        </div>
+        <a className='footer__link footer__link-zone-left' href='https://isawabi.com/about/' target="_blank">Isabelle Cuisset</a>
         <ul className="footer__link-zone-right footer__link-list">
         <li className="footer__link-listitem">
         <a className='footer__icon' href="https://github.com/Icuisset/" target="_blank"><img src={githubIcon} alt="GitHub icon" /></a>

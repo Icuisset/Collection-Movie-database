@@ -1,0 +1,46 @@
+.searchSection {
+    max-width: 100%;
+    margin: 0 auto;
+    padding : 80px 104px 80px;
+    background: url(../../../images/hero-background.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    color: #fff;
+    display : flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    min-height: 500px;
+    border: none;
+}
+
+
+@media screen and (max-width: 750px) {
+    .searchSection {
+      padding: 20px 40px 20px;
+    }
+}
+
+.heading-zone__title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: 'Roboto Slab',Arial, sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 64px;
+    text-align: left;
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 950px) {
+    .heading-zone__title {
+      font-size: 50px;
+      line-height: 54px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .heading-zone__title {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }

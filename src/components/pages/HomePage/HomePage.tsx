@@ -2,14 +2,16 @@ import React from 'react';
 
 import './HomePage.css';
 
+import SearchSection from '../../blocks/SearchSection/SearchSection';
+
 
   
 function HomePage(): JSX.Element {
     return (
-      <section className="homeSearchSection">
-        <p>there will be the search section here</p>
+      <div>
+        <SearchSection />
         <p>there will be a result section here</p>
-        </section>
+        </div>
     )
   };
 
