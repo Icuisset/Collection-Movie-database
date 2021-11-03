@@ -4,11 +4,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
 
 import Header from './components/blocks/Header/Header';
+import HomePage from "./components/pages/HomePage/HomePage";
+import Footer from "./components/blocks/Footer/Footer";
 
 class App extends React.Component {
   render() {
     return (
       <Router>
+        <div className="flex-wrapper">
         <Header />
         <Switch>
           <Route path='/detail'>
@@ -17,13 +20,11 @@ class App extends React.Component {
             </div>
           </Route>
           <Route path='/'>
-            <div>
-              <h3>Hello There! What is your name today?</h3>
-              <input></input>
-              <button onClick={() => alert("Hello")}>Say Hello</button>
-            </div>
+            <HomePage />
           </Route>
         </Switch>
+        <Footer />
+        </div>
       </Router>
     );
   }

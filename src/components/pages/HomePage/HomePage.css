@@ -1,0 +1,9 @@
+.homeSearchSection {
+    padding : 20px 104px 20px;
+}
+
+@media screen and (max-width: 750px) {
+    .homeSearchSection {
+      padding: 20px 40px 20px;
+    }
+}
