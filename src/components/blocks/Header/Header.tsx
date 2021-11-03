@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import './Header.css';
+import useStyles from './HeaderStyle';
 
 
   
 function Header(): JSX.Element {
+  const classes = useStyles();
     return (
-      <div className="headerNavBar">
-        <Link className="headerLink" to='/'>MyMovies</Link>
+      <div className={classes.headerNavBar}>
+        <Link className={classes.headerLink} to='/'>MyMovies</Link>
         </div>
     )
   };
