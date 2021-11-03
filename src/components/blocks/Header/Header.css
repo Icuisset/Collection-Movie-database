@@ -1,0 +1,18 @@
+.headerNavBar {
+    background-color: #131313;
+    padding : 20px 104px 20px;
+}
+
+.headerLink {
+    color: white;
+    font-family: 'Roboto Slab', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 750px) {
+    .headerNavBar {
+      padding: 20px 40px 20px;
+    }
+}

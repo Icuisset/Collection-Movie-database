@@ -3,13 +3,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
 
+import Header from './components/blocks/Header/Header';
+
 class App extends React.Component {
   render() {
     return (
       <Router>
-        <Link to="/ok">OK</Link>
+        <Header />
         <Switch>
-          <Route path='/ok'>
+          <Route path='/detail'>
             <div>
               <p>Here will be the film detail</p>
             </div>
