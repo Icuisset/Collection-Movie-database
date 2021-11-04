@@ -10,8 +10,8 @@ const useStyles = createUseStyles({
         
       headerLink: {
         "color": "white",
-        "fontFamily": "'Roboto Slab', Arial, sans-serif",
-        "fontWeight": "700",
+        "fontFamily": "'roboto-mono', monospace",
+        "fontWeight": "500",
         "fontSize": "20px",
         "lineHeight": "24px"
       },

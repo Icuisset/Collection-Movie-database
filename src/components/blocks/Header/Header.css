@@ -5,8 +5,9 @@
 
 .headerLink {
     color: white;
-    font-family: 'Roboto Slab', Arial, sans-serif;
-    font-weight: 700;
+    font-family: roboto-mono,monospace;
+    font-weight: 500;
+    font-style: normal;
     font-size: 20px;
     line-height: 24px;
     border-bottom-width: 0;
