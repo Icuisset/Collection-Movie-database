@@ -5,19 +5,19 @@
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 750px) {
     .movieCard {
         flex-direction: column;
     }
 }
 
 .movieCard__image-box {
-    height: 20vw;
+    height: 40vw;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 750px) {
     .movieCard__image-box {
-        height: 40vw;
+        height: 80vw;
     }
 }
 
@@ -27,7 +27,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 750px) {
     .movieCard__image {
         width: 60vw;
     }
@@ -37,11 +37,13 @@
     padding: 10px 15px 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 750px) {
     .movieCard__right {
         padding-left:0;
+        width: 60vw;
     }
 }
 
@@ -56,9 +58,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    max-height: 40px;
+    max-height: 80px;
     /* fallback */
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     /* number of lines to show */
     -webkit-box-orient: vertical;
 }
@@ -72,9 +74,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        max-height: 30px;
+        max-height: 60px;
         /* fallback */
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
         /* number of lines to show */
         -webkit-box-orient: vertical;
     }
@@ -87,23 +89,17 @@
 
 }
 
-.movieCard__text {
-    margin-top: 15px;
-    margin-bottom: 15px;
+.movieCard__year {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
     font-size: 18px;
-    line-height: 26px;
-    word-break: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    max-height: 52px;
-    /* fallback */
-    -webkit-line-clamp: 2;
-    /* number of lines to show */
-    -webkit-box-orient: vertical;
+    line-height: 24px;
+    margin: 18px 0 10px;
+
 }
 
-.movieCard__genre {
+.movieCard__type {
     font-family: roboto-mono, monospace;
     font-weight: 300;
     font-style: normal;

@@ -1,3 +1,165 @@
 .movieCardDetailSection {
     min-height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 104px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+  
+  @media screen and (max-width: 750px) {
+    .movieCardDetailSection {
+      padding: 20px 40px 20px;
+    }
+  }
+
+  .movieCardDetail {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.movieCardDetail__image-box {
+    height: 80vw;
+}
+
+.movieCardDetail__image {
+    width: 60vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieCardDetail__right {
+    padding: 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.movieCardDetail__title {
+    font-family: roboto-mono, monospace;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 40px;
+    margin: 0;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 80px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCardDetail__title {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+        word-break: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        max-height: 60px;
+        /* fallback */
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+}
+
+.movieCardDetail__title_underlined {
+    border-bottom: 1px solid #FF0000;
+    width: 80px;
+    height: 10px;
+
+}
+
+.movieCardDetail__year {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 18px 0 10px;
+}
+
+.movieCardDetail__rating {
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 18px 0 10px;
+    color: #FF0000;
+}
+
+.movieCardDetail__type {
+    font-family: roboto-mono, monospace;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+    margin: 0;
+
+}
+
+.movieCardDetail__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 26px;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 52px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.goback__button {
+    color:#131313;
+    font-family: roboto-mono, monospace;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px 56px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    /*border-radius: 100px;*/
+    background-color: white;
+    border: #131313 1px solid;
+    box-sizing: border-box;
+    transition: opacity 300ms ease;
+    max-width: 250px;
+    align-self: end;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .goback__button {
+      margin-left: 0px;
+      margin-top: 25px;
+      padding: 16px 52px;
+    }
+  }
+
+  .goback__button:hover {
+      cursor: pointer;
+      background-color:lightgray;
+  }
+
+  .movieCardDetail__link {
+      max-width: fit-content;
+      align-self: flex-end;
+  }
