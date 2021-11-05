@@ -1,6 +1,7 @@
 .headerNavBar {
     background-color: #131313;
     padding : 20px 104px 20px;
+    width: 100%;
 }
 
 .headerLink {

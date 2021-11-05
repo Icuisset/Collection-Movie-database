@@ -1,0 +1,122 @@
+.movieCard {
+    display: flex;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCard {
+        flex-direction: column;
+    }
+}
+
+.movieCard__image-box {
+    height: 20vw;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCard__image-box {
+        height: 40vw;
+    }
+}
+
+.movieCard__image {
+    width: 30vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCard__image {
+        width: 60vw;
+    }
+}
+
+.movieCard__right {
+    padding: 10px 15px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCard__right {
+        padding-left:0;
+    }
+}
+
+
+.movieCard__title {
+    font-family: roboto-mono, monospace;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 40px;
+    margin: 0;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 40px;
+    /* fallback */
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 950px) {
+    .movieCard__title {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+        word-break: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        max-height: 30px;
+        /* fallback */
+        -webkit-line-clamp: 1;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+}
+
+.movieCard__title_underlined {
+    border-bottom: 1px solid #FF0000;
+    width: 80px;
+    height: 10px;
+
+}
+
+.movieCard__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 26px;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 52px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.movieCard__genre {
+    font-family: roboto-mono, monospace;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+    margin: 0;
+
+}
+
+.movieCard__link {
+    font-weight: 700;
+    color: #FF0000;
+    text-align: right;
+}

@@ -6,6 +6,7 @@ import "./styles.css";
 import Header from './components/blocks/Header/Header';
 import HomePage from "./components/pages/HomePage/HomePage";
 import Footer from "./components/blocks/Footer/Footer";
+import MovieCardDetail from "./components/elements/MovieCardDetail/MovieCardDetail";
 
 class App extends React.Component {
   render() {
@@ -14,11 +15,7 @@ class App extends React.Component {
         <div className="flex-wrapper">
         <Header />
         <Switch>
-          <Route path='/detail'>
-            <div>
-              <p>Here will be the film detail</p>
-            </div>
-          </Route>
+          <Route path='/detail/:id' children={<MovieCardDetail/>}/>
           <Route path='/'>
             <HomePage />
           </Route>

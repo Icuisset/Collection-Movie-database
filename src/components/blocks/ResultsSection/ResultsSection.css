@@ -1,0 +1,22 @@
+.resultsSection {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 104px 80px;
+    box-sizing: border-box;
+  }
+  
+  
+  @media screen and (max-width: 750px) {
+    .resultsSection {
+      padding: 20px 40px 20px;
+    }
+  }
+
+  .resultsCards {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      width:100%;
+      padding-left: 0;
+  }

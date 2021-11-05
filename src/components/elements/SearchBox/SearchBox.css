@@ -11,7 +11,7 @@
 }
 
 .search__input {
-  border-radius: 100px;
+  /*border-radius: 100px;*/
   border: none;
   width: 410px;
   padding: 20px 56px;
@@ -38,12 +38,13 @@
   margin-left: -150px;
   color: white;
   font-family: roboto-mono, monospace;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-weight: 500;
   font-style: normal;
-  padding: 21px 56px;
+  padding: 20px 56px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border: none;
-  border-radius: 100px;
+  /*border-radius: 100px;*/
   background-color: #FF0000;
   box-sizing: border-box;
   transition: opacity 300ms ease;
