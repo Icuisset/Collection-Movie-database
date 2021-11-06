@@ -25,7 +25,7 @@ function SearchBox({onSearch}:SearchBoxProps): JSX.Element {
           value={searchText}
           onChange={(e)=>setSearchText(e.target.value)}
         />
-        <button className='search__button' type='button' onClick={handleSubmit}>
+        <button className='search__button' type='button' data-testid="btn-submit"onClick={handleSubmit}>
           Search
         </button>
     </div>
