@@ -11,6 +11,9 @@ import './MovieCardDetail.css';
 function MovieCardDetail(): JSX.Element {
 
     let { id } = useParams<{id?: string}>();
+
+
+    
    
     interface Card { 
         Title : string;

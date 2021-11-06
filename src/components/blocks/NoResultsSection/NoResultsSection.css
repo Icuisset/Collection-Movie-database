@@ -1,0 +1,25 @@
+.noResultsSection {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px 104px 0px;
+  }
+  
+  
+  @media screen and (max-width: 750px) {
+    .noResultsSection {
+      padding: 0px 40px 0px;
+    }
+  }
+
+  .noResultsMessage {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 40px;
+    margin: 0;
+    margin-top: 100px;
+
+}
