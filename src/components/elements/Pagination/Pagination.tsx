@@ -1,11 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { useContext } from 'react';
-
-import KeywordContext from '../../../context/KeywordContext';
 
 import './Pagination.css';
-import moviesApi from '../../../utils/moviesApi';
 
 interface PaginationProps{
     totalMovies: number;
@@ -26,7 +21,7 @@ function Pagination({totalMovies, selectedPage, setSelectedPage}:PaginationProps
     return (
         <div className="pagination-zone">
             <div>
-            <button className="pagination-button" onClick={() =>setSelectedPage(1)} >First</button>
+            <button className="pagination-button" data-testid="btn-first" onClick={() =>setSelectedPage(1)} >First</button>
             {pageNumberList.map(pageNr => {
                 return <button className="pagination-button" onClick={() => setSelectedPage(pageNr)}>{pageNr}</button>
             })}
