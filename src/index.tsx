@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import React from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles.css";
 
@@ -9,7 +10,9 @@ import Footer from "./components/blocks/Footer/Footer";
 import MovieCardDetail from "./components/elements/MovieCardDetail/MovieCardDetail";
 
 class App extends React.Component {
+
   render() {
+
     return (
       <Router>
         <div className="flex-wrapper">

@@ -29,21 +29,21 @@ class MoviesApi {
     }
   
 
-  //GET SEARCH RESULTS BY PAGE FOR KEYWORD https://http://www.omdbapi.com/?s=KEYWORD&page=PAGE&apikey=9efe393d
-  getMoviesResultsbyPage(keyword: string,page: string) {
-    return fetch(this._baseUrl + '?s=' + keyword+ '?page=' + page + '&apiKey=' + this._apiKey, {
-      method: 'GET',
-      redirect: 'follow'
+    //GET SEARCH RESULTS BY PAGE FOR KEYWORD https://http://www.omdbapi.com/?s=KEYWORD&page=PAGE&apikey=9efe393d
+    getMoviesResultsbyPage(keyword: string,page: string) {
+      return fetch(this._baseUrl + '?s=' + keyword+ '&page=' + page + '&apiKey=' + this._apiKey, {
+       method: 'GET',
+       redirect: 'follow'
       }
     ).then((res) => this._checkResponse(res))
   }
 
 
-//GET DETAIL RESULT BY ID https://http://www.omdbapi.com/?i=ID&apikey=9efe393d
-getResultbyId(imdbID: string){
-  return fetch(this._baseUrl + '?i=' + imdbID + '&apiKey=' + this._apiKey, {
-    method: 'GET',
-    redirect: 'follow'
+    //GET DETAIL RESULT BY ID https://http://www.omdbapi.com/?i=ID&apikey=9efe393d
+    getResultbyId(imdbID: string){
+     return fetch(this._baseUrl + '?i=' + imdbID + '&apiKey=' + this._apiKey, {
+     method: 'GET',
+     redirect: 'follow'
     }
   ).then((res) => this._checkResponse(res))
 }

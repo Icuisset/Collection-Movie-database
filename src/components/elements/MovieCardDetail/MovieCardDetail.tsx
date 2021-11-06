@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import initialCards from '../../../utils/initialCards';
 import { Link } from 'react-router-dom';
 
 
