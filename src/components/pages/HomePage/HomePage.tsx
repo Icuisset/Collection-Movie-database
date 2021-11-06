@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import KeywordContext from '../../../context/KeywordContext';
 
 import './HomePage.css';
 
@@ -25,7 +24,8 @@ function HomePage(): JSX.Element {
 
   useEffect(() => {
       moviesApi
-        .getMoviesResultsbyPage(keyword, selectedPage.toString())
+        .getMoviesResultsbyPage(
+         keyword, selectedPage.toString())
         .then((result) => {
           console.log(result);
           const response:string = result.Response;
@@ -44,17 +44,43 @@ function HomePage(): JSX.Element {
           console.log(err);
         });
     }
-  , [keyword, selectedPage]);
+  , [selectedPage]);
+
+
+  const handleMovieSearch = (searchKeyword: string) => {
+    if ( searchKeyword !== "") {
+    setKeyword(searchKeyword);
+    moviesApi
+      .getMoviesResults(searchKeyword)
+      .then((result) => {
+        console.log(result);
+        const response:string = result.Response;
+        if (response ==="True") {
+          setCards(Array.from(result.Search));
+          settotalResults(Number(result.totalResults));
+          setIsError(false);
+        } else {
+          setNoResultMessage(result.Error);
+          setIsError(true);
+        };
+        console.log(result);
+        console.log(result.totalResults);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
+  };
+
+
 
 
     return (
       <>
-        <SearchSection />
+        <SearchSection onSearch={handleMovieSearch}/>
         <NoResultsSection message={noResultMessage} error={isError} />
         <ResultsSection movieCards={cards}/>
-        <KeywordContext.Provider value={keyword}>
         <Pagination totalMovies={totalResults} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-        </KeywordContext.Provider>
         </>
     )
   };
