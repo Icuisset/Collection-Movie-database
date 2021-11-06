@@ -15,12 +15,12 @@ function MovieCardDetail(): JSX.Element {
     let { id } = useParams<{id: string}>();
 
     const [selectedMovie, setSelectedMovie] = useState({
-      title:"Star Wars",
-      year:"2022",
-      type:"Adventure",
+      title:"Sorry, there is no film with this ID",
+      year:"",
+      type:"",
       poster:"https://images.unsplash.com/photo-1533613220915-609f661a6fe1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=928&q=8",
-      plot:"An amazing story from the stars",
-      rating:"8.5"
+      plot:"Please search for another film",
+      rating:""
     });
 
     useEffect(() => {
@@ -28,6 +28,7 @@ function MovieCardDetail(): JSX.Element {
         .getResultbyId(id)
         .then((result) => {
           console.log(result);
+          if (result.Response === "True") {
           setSelectedMovie({
             title:result.Title,
             year:result.Year,
@@ -35,7 +36,7 @@ function MovieCardDetail(): JSX.Element {
             poster:result.Poster,
             plot:result.Plot,
             rating:result.imdbRating
-          });
+          });}
         })
         .catch((err) => {
           console.log(err);
@@ -55,7 +56,8 @@ function MovieCardDetail(): JSX.Element {
           <p className="movieCard__year">{selectedMovie.year}</p>
           <p className="movieCardDetail__text">{selectedMovie.plot}</p>
           <p className="movieCardDetail__type">{selectedMovie.type}</p>
-          <p className="movieCardDetail__rating">rating: {selectedMovie.rating}</p>
+          { selectedMovie.rating?
+          (<p className="movieCardDetail__rating">rating: {selectedMovie.rating}</p>): null}
           <Link className="movieCardDetail__link" to='/'><button className='goback__button' type='button'>Go Back</button></Link>
           </div>
           </div>
