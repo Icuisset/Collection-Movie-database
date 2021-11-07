@@ -16,7 +16,7 @@ import initialCards from '../../../utils/initialCards';
 function HomePage(): JSX.Element {
 
   const [cards, setCards] = useState([]);
-  const [keyword,setKeyword] = useState("sun");
+  const [keyword,setKeyword] = useState("");
   const [selectedPage, setSelectedPage] = useState(1);
   const [totalResults, settotalResults] =useState(0);
   const [noResultMessage, setNoResultMessage]=useState("");
