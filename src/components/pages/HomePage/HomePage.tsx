@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 
 import './HomePage.css';
 
@@ -16,7 +16,7 @@ import initialCards from '../../../utils/initialCards';
 function HomePage(): JSX.Element {
 
   const [cards, setCards] = useState([]);
-  const [keyword,setKeyword] = useState("");
+  const [keyword,setKeyword] = useState("sun");
   const [selectedPage, setSelectedPage] = useState(1);
   const [totalResults, settotalResults] =useState(0);
   const [noResultMessage, setNoResultMessage]=useState("");
@@ -47,7 +47,7 @@ function HomePage(): JSX.Element {
   , [selectedPage]);
 
 
-  const handleMovieSearch = (searchKeyword: string) => {
+  const handleMovieSearch = useCallback( (searchKeyword: string) => {
     if ( searchKeyword !== "") {
     setKeyword(searchKeyword);
     moviesApi
@@ -70,7 +70,7 @@ function HomePage(): JSX.Element {
         console.log(err);
       });
     }
-  };
+  }, []);
 
 
 
