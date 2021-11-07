@@ -1,6 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
 
 import './Pagination.css';
+
 
 interface PaginationProps{
     totalMovies: number;
@@ -14,16 +16,17 @@ function Pagination({totalMovies, selectedPage, setSelectedPage}:PaginationProps
     const newPageTotal: number = Math.min(10, pageTotal);
     const pageNumberList = [];
     for(let i = 1; i < newPageTotal; i++){ // generates the pages numbers
-        pageNumberList.push(i)    
+        pageNumberList.push(i);
     }
 
-    
+
+
     return (
         <div className="pagination-zone">
             <div>
             <button className="pagination-button" data-testid="btn-first" onClick={() =>setSelectedPage(1)} >First</button>
-            {pageNumberList.map(pageNr => {
-                return <button className="pagination-button" onClick={() => setSelectedPage(pageNr)}>{pageNr}</button>
+            {pageNumberList.map((pageNr,index) => {
+                return <button key={index} className="pagination-button" onClick={() => setSelectedPage(pageNr)}>{pageNr}</button>
             })}
             <button className="pagination-button" onClick={() =>setSelectedPage(pageTotal)} >Last</button>
             </div>

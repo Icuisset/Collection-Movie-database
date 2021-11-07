@@ -32,3 +32,8 @@
       padding-left: 10px;
       margin-left: 10px;
   }
+
+  .pagination-button_focused {
+    color: #FF0000;
+    border-color:#FF0000;
+  }
