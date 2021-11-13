@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useReducer } from 'react';
 
 import './HomePage.css';
 
@@ -9,11 +9,18 @@ import ResultsSection from '../../blocks/ResultsSection/ResultsSection';
 import NoResultsSection from '../../blocks/NoResultsSection/NoResultsSection';
 import Pagination from '../../elements/Pagination/Pagination';
 import moviesApi from '../../../utils/moviesApi';
-import initialCards from '../../../utils/initialCards';
+import reducer from '../../../reducer/reducer';
+import {ActionType, State, Action} from '../../../reducer/reducer';
 
 
   
 function HomePage(): JSX.Element {
+
+  const initialCardState: State = {
+    cards: [],
+    totalResults: 0,
+}
+  const [cardState, dispatch] = useReducer(reducer, initialCardState)
 
   const [cards, setCards] = useState([]);
   const [keyword,setKeyword] = useState("sun");
@@ -31,7 +38,9 @@ function HomePage(): JSX.Element {
           const response:string = result.Response;
           if (response ==="True") {
             setCards(Array.from(result.Search));
+            dispatch({type:ActionType.SET_SEARCHRESULTS,payload:result.Search});
             settotalResults(Number(result.totalResults));
+            dispatch({type:ActionType.SET_TOTALRESULTS,payload:result.totalResults});
             setIsError(false);
           } else {
             setNoResultMessage(result.Error);
@@ -57,7 +66,9 @@ function HomePage(): JSX.Element {
         const response:string = result.Response;
         if (response ==="True") {
           setCards(Array.from(result.Search));
+          dispatch({type:ActionType.SET_SEARCHRESULTS,payload:result.Search});
           settotalResults(Number(result.totalResults));
+          dispatch({type:ActionType.SET_TOTALRESULTS,payload:result.totalResults});
           setIsError(false);
         } else {
           setNoResultMessage(result.Error);
@@ -79,8 +90,8 @@ function HomePage(): JSX.Element {
       <>
         <SearchSection onSearch={handleMovieSearch}/>
         <NoResultsSection message={noResultMessage} error={isError} />
-        <ResultsSection movieCards={cards}/>
-        <Pagination totalMovies={totalResults} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+        <ResultsSection movieCards={cardState.cards}/>
+        <Pagination totalMovies={cardState.totalResults} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
         </>
     )
   };
