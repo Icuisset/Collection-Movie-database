@@ -51,7 +51,7 @@ class MoviesApi {
   
   
   const moviesApi = new MoviesApi({
-    baseUrl: "http://www.omdbapi.com/",
+    baseUrl: "https://www.omdbapi.com/",
     apiKey: '9efe393d',
   })
   
